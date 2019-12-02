@@ -1,0 +1,24 @@
+function fiboEvenSum(n) {
+  // You can do it!
+  //basecase 
+  let previous = 0;
+  let current = 1;
+  let total = 0;
+
+//iterate through the sequence until the nth place 
+//which means i should ALSO execute the for loop when it equals n (the last place)
+  for(let i = 0; i <= n; i++){
+ //use the modulo as a conditional statement to only increment total
+ //when the Fib number is equal   
+   if(current % 2 == 0){
+    total += current;}
+
+//increment the places
+    current = current + previous;
+    previous = current - previous;
+
+  }
+  return total;
+}
+
+console.log(fiboEvenSum(43));
