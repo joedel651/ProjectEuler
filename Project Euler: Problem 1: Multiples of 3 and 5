@@ -1,0 +1,21 @@
+function multiplesOf3and5(number) {
+  // Good luck!
+  //define a variable called total that will add up the multiples 
+  let total = 0;
+  //according to the hint we want to grab all the cases where any
+  //number up to 1000 divided by 3 or 5 equal 0
+  //that can be done with a for loop
+  for(let i = 3; i < number; i++){
+    //have a case to check if remainder of 3 or 5 equals 0
+    if(i%3 == 0 | i%5 == 0 ){
+//increment the total 
+      total += i;
+    }
+     
+
+  }
+  //return total 
+  return total;
+}
+
+multiplesOf3and5(1000);
