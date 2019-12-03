@@ -1,0 +1,33 @@
+function largestPrimeFactor(number) {
+  // Good luck!
+  //initialize some variables 
+  let maxPrime;
+  //check the basecase
+  //2 is the only even prime number
+  while (number%2==0){
+
+    maxPrime = 2;
+    return maxPrime;
+  }
+
+//iterate through the odd numbers 
+   for (let i = 3; i <= number; i += 2) { 
+            while (number % i == 0) { 
+              //keep dividing by i until there is a remainder
+                maxPrime = i; 
+                number = number / i; 
+
+                
+            } 
+        } 
+
+// when n is a prime number greater than 2 
+  /*  if (number > 2){ 
+      console.log("are you going in the if statement")
+        maxPrime = number; }*/
+  
+    return maxPrime; 
+} 
+
+
+console.log(largestPrimeFactor(600851475143));
