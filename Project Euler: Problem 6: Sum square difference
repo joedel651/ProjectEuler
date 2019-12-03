@@ -1,0 +1,24 @@
+function sumSquareDifference(n) {
+  // Good luck!
+  //define some variables to start
+  let sum_of_squares = 0;
+  let square_of_sum = 0;
+  //keep track of the total numbers from 1 to n 
+  let total = 0;
+  //get the sum of the squares
+  for(let i = 0; i <= n; i++){
+    sum_of_squares += Math.pow(i, 2);
+  }
+
+//calculate the total 
+  for(let i = 0; i <= n; i++){
+    total += i;
+  }
+//get the square of the sum 
+  square_of_sum = Math.pow(total,2);
+
+  //return the difference
+  return square_of_sum - sum_of_squares;
+}
+
+console.log(sumSquareDifference(10));
