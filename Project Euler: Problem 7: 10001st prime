@@ -3,7 +3,7 @@ function nthPrime(n) {
   let primeArray = [2,3,5,7,11]
   let potential_prime = 17;
   let prime_test = []
-
+for(let i = 0; primeArray.length < 6; i++){
   primeArray.forEach(element => {
   prime_test.push( potential_prime % element )
 });
@@ -12,10 +12,9 @@ console.log(prime_test);
 if(prime_test.indexOf(0) === -1){
   primeArray.push(potential_prime)
 }
-
+}
 console.log(primeArray);
   return true;
 }
 
 nthPrime(10001);
-
