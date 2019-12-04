@@ -3,6 +3,12 @@ function nthPrime(n) {
   let primeArray = [2,3,5,7,11]
   let potential_prime = 17;
   let prime_test = []
+
+  primeArray.forEach(element => {
+  prime_test.push( potential_prime % element )
+});
+
+console.log(prime_test);
   return true;
 }
 
