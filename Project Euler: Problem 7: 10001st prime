@@ -9,7 +9,13 @@ function nthPrime(n) {
 });
 
 console.log(prime_test);
+if(prime_test.indexOf(0) === -1){
+  primeArray.push(potential_prime)
+}
+
+console.log(primeArray);
   return true;
 }
 
 nthPrime(10001);
+
