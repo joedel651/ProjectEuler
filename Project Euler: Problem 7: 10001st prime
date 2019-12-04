@@ -1,0 +1,9 @@
+function nthPrime(n) {
+  // Good luck!
+  let primeArray = [2,3,5,7,11]
+  let potential_prime = 17;
+  let prime_test = []
+  return true;
+}
+
+nthPrime(10001);
