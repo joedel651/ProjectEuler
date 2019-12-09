@@ -8,10 +8,7 @@ for(let i = 0; primeArray.length < 6; i++){
   prime_test.push( potential_prime % element )
 });
 
-console.log(prime_test);
-if(prime_test.indexOf(0) === -1){
-  primeArray.push(potential_prime)
-}
+
 }
 console.log(primeArray);
   return true;
