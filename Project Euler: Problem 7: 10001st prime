@@ -2,15 +2,18 @@ function nthPrime(n) {
   // Good luck!
   //base case 
   let vecOfPrimes = [2]
-  //let potential_prime = 3;
+ 
 
-  
+//helper function that will test is the number we are looking at prime?  
 function isPrime(arr, number){
 
+// .every is used to make sure a condition is satisfied for EVERY element in an
+//array
   var result = arr.every(function (e) {
     return number % e 
 });
 
+//if it is true then push the element into the array 
 if (result == true){
   arr.push(number)
 }
@@ -18,13 +21,15 @@ if (result == true){
 
 }
 
+//use recursion to run the helper function repeatedly to get the nth
+//prime number up to the 10001st prime number
 for(let i = 3; vecOfPrimes.length < 10001; i++){
 isPrime(vecOfPrimes, i)
 
 }
 
-
-return vecOfPrimes
+//return the element at the position specified when the algorithm is called
+return vecOfPrimes[n-1]
 
 }
 
