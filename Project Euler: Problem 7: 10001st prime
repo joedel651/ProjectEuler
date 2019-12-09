@@ -1,17 +1,32 @@
 function nthPrime(n) {
   // Good luck!
-  let primeArray = [2,3,5,7,11]
-  let potential_prime = 17;
-  let prime_test = []
-for(let i = 0; primeArray.length < 6; i++){
-  primeArray.forEach(element => {
-  prime_test.push( potential_prime % element )
+  //base case 
+  let vecOfPrimes = [2]
+  //let potential_prime = 3;
+
+  
+function isPrime(arr, number){
+
+  var result = arr.every(function (e) {
+    return number % e 
 });
 
-
-}
-console.log(primeArray);
-  return true;
+if (result == true){
+  arr.push(number)
 }
 
-nthPrime(10001);
+
+}
+
+for(let i = 3; vecOfPrimes.length < 10001; i++){
+isPrime(vecOfPrimes, i)
+
+}
+
+
+return vecOfPrimes
+
+}
+
+console.log(nthPrime(10001));
+
