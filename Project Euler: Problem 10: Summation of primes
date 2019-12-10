@@ -25,7 +25,7 @@ if (result == true){
 
 //use recursion to run the helper function repeatedly to get the nth
 //prime number up to the 10001st prime number
-for(let i = 3; vecOfPrimes.length < 10001; i++){
+for(let i = 3; vecOfPrimes.length < 20000; i++){
 isPrime(vecOfPrimes, i)
 
 }
@@ -44,6 +44,8 @@ for(let i =0; i < filtered.length ; i ++){
   return total;
 }
 
+//This is a correct solution but freecode camp does not like computing large numbers
+//like the last requirement
 console.log(primeSummation(17));
 console.log(primeSummation(2001));
 console.log(primeSummation(140759));
