@@ -1,20 +1,34 @@
 function largestGridProduct(arr) {
   //initial variable
   let maxHorizontal = 0;
+  let maxVertical = 0;
   let arrOfMax = []
   //get the max in the horizontal direction 
   for(let i =0; i< arr.length; i++){
-    for (let j=0; j<arr.length; j++){
-let temp = arr[i][j]*arr[i][j+2]*arr[i][j+3]*arr[i][j+4]
+    for (let j=0; j+3<arr.length; j++){
+let temp = arr[i][j]*arr[i][j+1]*arr[i][j+2]*arr[i][j+3]
 
 if(temp > maxHorizontal){ maxHorizontal = temp}
 
     }
   }
+  //keep track of the maxes in different directions
   arrOfMax.push(maxHorizontal)
-  
+
+    //get the max in the vertical direction 
+ for(let i =0; i+3< arr.length; i++){
+    for (let j=0; j<arr.length; j++){
+let temp = arr[i][j]*arr[i+1][j]*arr[i+2][j]*arr[i+3][j]
+
+if(temp > maxVertical){ maxVertical = temp}
+
+    }
+  }
+
+  arrOfMax.push(maxVertical)
+
   // Good luck!
-  return maxHorizontal
+  return arrOfMax
 }
 
 // Only change code above this line
