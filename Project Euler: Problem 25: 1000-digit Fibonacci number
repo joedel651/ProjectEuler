@@ -1,0 +1,19 @@
+function digitFibonacci(n) {
+  // Good luck!
+  let count = 1
+  let prev = 0
+  let curr = 1
+  //convert curr to a string and then dot it with length to get the length of that string
+  while(curr.toString().length < n){
+
+curr = prev + curr
+prev = curr - prev
+count++
+
+  }
+  
+  //return the index of the numbers when it is outside the loop it will be the first number with n digits. 
+  return count;
+}
+
+console.log(digitFibonacci(5));
