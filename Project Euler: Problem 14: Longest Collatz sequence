@@ -1,0 +1,30 @@
+function longestCollatzSequence(limit) {
+  let arr = [limit]
+  let total = []
+  let count = 0
+  let max = 0
+  let index = limit
+
+  while(limit !== 1){
+  limit % 2 === 0 ? limit = limit / 2 : limit = 3*limit + 1
+  //console.log(limit)
+  arr.push(limit)
+  
+  }
+
+
+if(limit === 1){
+ count = arr.length
+ total.push(count)
+ if(count > max){
+   max = count
+ }
+
+  return arr
+}
+ 
+  
+  return arr;
+}
+
+console.log(longestCollatzSequence(13));
