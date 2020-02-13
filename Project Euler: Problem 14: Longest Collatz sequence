@@ -1,7 +1,8 @@
 function longestCollatzSequence(limit) {
   
   
-  let max = 0 
+  let max = 0
+  let maxLim
  
 function lengthOfChain(limit){
   let arr = [limit]
@@ -11,7 +12,7 @@ function lengthOfChain(limit){
   arr.push(limit)
   }
 
-console.log(arr)
+//console.log(arr)
 if(limit === 1){
  
   return arr.length
@@ -20,17 +21,20 @@ if(limit === 1){
 }
 
 
-console.log(lengthOfChain(14))
+//console.log(lengthOfChain(14))
 
 for(let i = limit; i> 0; i--){
   if(lengthOfChain(i)> max){
     max = lengthOfChain(i)
+    maxLim = i
   }
-  console.log(max)
+ // console.log(max)
+  console.log("this is where the max length was")
+  console.log(maxLim)
 }
 
-return max
+return maxLim
   
 }
 
-console.log(longestCollatzSequence(12));
+console.log(longestCollatzSequence(14));
